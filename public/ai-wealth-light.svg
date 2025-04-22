@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
+    </linearGradient>
+    
+    <!-- Circuit pattern -->
+    <pattern id="circuitPattern" patternUnits="userSpaceOnUse" width="200" height="200" patternTransform="scale(0.5) rotate(0)">
+      <path d="M100,10 L100,50 M100,50 L150,50 M150,50 L150,100 M100,50 L50,50 M50,50 L50,150 M50,150 L100,150 M100,150 L100,100 M100,100 L150,100 M10,100 L50,100 M150,100 L190,100" stroke="#1E90FF" stroke-width="1.5" fill="none" opacity="0.3"/>
+      <circle cx="100" cy="50" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="150" cy="50" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="50" cy="50" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="50" cy="100" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="100" cy="100" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="150" cy="100" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="50" cy="150" r="3" fill="#0066CC" opacity="0.5"/>
+      <circle cx="100" cy="150" r="3" fill="#0066CC" opacity="0.5"/>
+    </pattern>
+    
+    <!-- Digital particle effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="450" fill="url(#bgGradient)"/>
+  
+  <!-- Circuit pattern overlay -->
+  <rect width="800" height="450" fill="url(#circuitPattern)"/>
+  
+  <!-- Growth chart upward trend -->
+  <path d="M100,350 L200,300 L300,320 L400,250 L500,220 L600,180 L700,120" 
+        stroke="#0052CC" stroke-width="3" fill="none" 
+        stroke-dasharray="2,2"
+        filter="url(#glow)"/>
+  
+  <!-- Digital particles along chart line -->
+  <circle cx="100" cy="350" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="200" cy="300" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="300" cy="320" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="400" cy="250" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="500" cy="220" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="600" cy="180" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="700" cy="120" r="4" fill="#0066CC" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Larger data nodes -->
+  <circle cx="300" cy="180" r="30" fill="#0066CC" opacity="0.2"/>
+  <circle cx="300" cy="180" r="25" fill="#0066CC" opacity="0.1"/>
+  <circle cx="300" cy="180" r="3" fill="#0052CC" opacity="0.9" filter="url(#glow)"/>
+  
+  <circle cx="500" cy="150" r="40" fill="#0066CC" opacity="0.2"/>
+  <circle cx="500" cy="150" r="35" fill="#0066CC" opacity="0.1"/>
+  <circle cx="500" cy="150" r="3" fill="#0052CC" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Abstract binary/AI representation -->
+  <text x="120" y="130" font-family="monospace" font-size="8" fill="#0066CC" opacity="0.4">01001010101</text>
+  <text x="220" y="160" font-family="monospace" font-size="8" fill="#0066CC" opacity="0.4">10110101001</text>
+  <text x="420" y="140" font-family="monospace" font-size="8" fill="#0066CC" opacity="0.4">01001010101</text>
+  <text x="520" y="100" font-family="monospace" font-size="8" fill="#0066CC" opacity="0.4">10100101101</text>
+  
+  <!-- Small connecting lines between nodes -->
+  <path d="M300,180 L350,200 L400,190 L450,170 L500,150" 
+        stroke="#0066CC" stroke-width="1" fill="none" 
+        opacity="0.5"/>
+        
+  <!-- Abstract hexagonal/network pattern in background -->
+  <path d="M600,80 L650,100 L650,150 L600,170 L550,150 L550,100 Z" 
+        stroke="#0066CC" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M150,250 L200,270 L200,320 L150,340 L100,320 L100,270 Z" 
+        stroke="#0066CC" stroke-width="1" fill="none" opacity="0.2"/>
+  
+  <!-- Small glowing dots scattered throughout -->
+  <g filter="url(#glow)">
+    <circle cx="150" cy="100" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="250" cy="120" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="350" cy="90" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="450" cy="110" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="550" cy="80" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="650" cy="140" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="200" cy="200" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="400" cy="150" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="600" cy="200" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="180" cy="280" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="280" cy="240" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="380" cy="220" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="480" cy="260" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="580" cy="230" r="1" fill="#0052CC" opacity="0.6"/>
+    <circle cx="680" cy="250" r="1" fill="#0052CC" opacity="0.6"/>
+  </g>
+</svg>
