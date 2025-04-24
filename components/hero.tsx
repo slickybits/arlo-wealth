@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { useTheme } from "next-themes"
+import BackgroundPaths from "./background-paths"
 import QualificationForm from "./qualification-form"
 
 export default function Hero() {
@@ -33,49 +34,16 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen pt-20 pb-10 flex items-center relative overflow-hidden">
+      {/* Background paths */}
+      <BackgroundPaths />
+
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br -z-10"></div>
-
-      {/* Light mode background image */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-500 -z-20 ${isDarkMode ? "opacity-0" : "opacity-30"}`}
-      >
-        <Image
-          src="/ai-wealth-light.svg?height=1920&width=1920"
-          alt="Light mode background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      {/* Dark mode background image */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-500 -z-20 ${isDarkMode ? "opacity-30" : "opacity-0"}`}
-      >
-        <Image
-          src="/ai-wealth-dark.svg?height=1920&width=1920"
-          alt="Dark mode background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/40 dark:from-black/80 dark:to-black/40 -z-10"></div>
 
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div ref={sectionRef} className="section-fade-in">
-            <div className="mb-8">
-              <Image
-                src="/placeholder.svg?height=80&width=240"
-                alt="Arlo Wealth Logo"
-                width={240}
-                height={80}
-                className="h-20 w-auto"
-              />
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800 dark:text-white">
               AI-Powered <span className="text-blue-600 dark:text-blue-400">Wealth Growth</span> For Everyone
             </h1>
