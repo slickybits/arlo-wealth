@@ -38,7 +38,7 @@ export default function Hero() {
       <BackgroundPaths />
 
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/40 dark:from-black/80 dark:to-black/40 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-200/80 to-gray-100/40 dark:from-black/80 dark:to-black/40 -z-10"></div>
 
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
